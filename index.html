@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucro Real | Especialistas em Marketing e Vendas para Pequenos Negócios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1), 0 10px 10px -5px rgba(79, 70, 229, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .timeline-dot {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 4px solid #7c3aed;
+            border-radius: 50%;
+            top: -4px;
+            left: -4px;
+            z-index: -1;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-lg mr-2 hover-scale">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Lucro Real</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicos" class="text-gray-600 hover:text-indigo-600 font-medium nav-link">Serviços</a>
+                    <a href="#metodo" class="text-gray-600 hover:text-indigo-600 font-medium nav-link">Método</a>
+                    <a href="#resultados" class="text-gray-600 hover:text-indigo-600 font-medium nav-link">Resultados</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-indigo-600 font-medium nav-link">Especialistas</a>
+                    <a href="#contato" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2 rounded-full transition duration-300 hover-scale">
+                        Consultoria Grátis
+                    </a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-6 py-4">
+                <a href="#servicos" class="block py-2 text-gray-800 hover:text-indigo-600">Serviços</a>
+                <a href="#metodo" class="block py-2 text-gray-800 hover:text-indigo-600">Método</a>
+                <a href="#resultados" class="block py-2 text-gray-800 hover:text-indigo-600">Resultados</a>
+                <a href="#sobre" class="block py-2 text-gray-800 hover:text-indigo-600">Especialistas</a>
+                <a href="#contato" class="block mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2 rounded-full text-center transition duration-300">
+                    Consultoria Grátis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-28 pb-16 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="bg-white bg-opacity-20 inline-flex items-center px-4 py-2 rounded-full mb-6">
+                        <span class="pulse mr-2">🔴</span>
+                        <span class="text-sm font-medium">Pare de deixar dinheiro na mesa</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Transforme seu negócio estagnado em uma <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">máquina de lucro</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        Estratégias comprovadas de marketing e vendas que colocam dinheiro no seu bolso em até 30 dias.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contato" class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-full text-lg transition duration-300 text-center hover-scale">
+                            <i class="fas fa-calendar-check mr-2"></i> Agendar Consultoria
+                        </a>
+                        <a href="#resultados" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 font-bold py-4 px-8 rounded-full text-lg transition duration-300 text-center hover-scale">
+                            <i class="fas fa-chart-bar mr-2"></i> Ver Resultados
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Cliente">
+                        </div>
+                        <div class="ml-4">
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <p class="text-sm opacity-90">+150 negócios transformados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative floating">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Homem feliz com crescimento de negócios" class="rounded-xl shadow-2xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg w-3/4 hover-scale">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-coins text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Média de nossos clientes</p>
+                                    <p class="text-2xl font-bold text-gray-800">+142%</p>
+                                    <p class="text-gray-500 text-xs">aumento no lucro em 3 meses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 mb-8">Já ajudamos negócios como:</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="bg-gray-100 px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                    <span class="font-bold text-gray-700">Restaurante</span>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                    <span class="font-bold text-gray-700">Consultoria</span>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                    <span class="font-bold text-gray-700">E-commerce</span>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                    <span class="font-bold text-gray-700">Serviços</span>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                    <span class="font-bold text-gray-700">Varejo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Você está deixando dinheiro na mesa?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Identifique se seu negócio está cometendo esses erros comuns
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-times-circle text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Atraindo o público errado</h3>
+                    <p class="text-gray-600">
+                        Seu marketing está trazendo muitas pessoas que não compram, desperdiçando tempo e dinheiro.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-times-circle text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Processos de venda vazando</h3>
+                    <p class="text-gray-600">
+                        Clientes interessados estão escapando por falta de follow-up e técnicas de vendas eficazes.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-times-circle text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Precificação inadequada</h3>
+                    <p class="text-gray-600">
+                        Seus preços não refletem o valor real que você entrega, deixando lucro na mesa.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contato" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 hover-scale">
+                    <i class="fas fa-bolt mr-2"></i> Quero corrigir esses erros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O que fazemos por você</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Estratégias personalizadas para transformar seu negócio em uma máquina de lucro
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-xl p-8 feature-card border border-gray-100">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Marketing Estratégico</h3>
+                    <p class="text-gray-600 mb-4">
+                        Identificamos exatamente quem é seu cliente ideal e como alcançá-lo da maneira mais eficiente possível.
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                            <span>Definição de público-alvo que realmente compra</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                            <span>Posicionamento de marca que destaca seu valor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                            <span>Estratégias de conteúdo que convertem</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-xl p-8 feature-card border border-gray-100">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hand-holding-usd text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Vendas Convertidas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transformamos visitantes em clientes com processos de vendas otimizados e técnicas comprovadas.
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                            <span>Scripts de vendas que fecham mais negócios</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                            <span>Processos de vendas otimizados para mais conversões</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                            <span>Técnicas de negociação que aumentam o ticket médio</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-xl p-8 feature-card border border-gray-100">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Otimização de Lucro</h3>
+                    <p class="text-gray-600 mb-4">
+                        Identificamos oportunidades ocultas para aumentar seus lucros sem necessariamente vender mais.
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span>Análise de precificação estratégica</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span>Upselling e cross-selling que clientes adoram</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-3"></i>
+                            <span>Redução de custos ocultos que estão comendo seu lucro</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="metodo" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nosso método comprovado</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Um processo claro para tirar seu negócio da estagnação e começar a lucrar
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <div class="relative">
+                            <div class="w-24 h-24 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-2xl timeline-dot">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Diagnóstico Profundo</h3>
+                        <p class="text-gray-600">
+                            Analisamos seu negócio de ponta a ponta para identificar exatamente onde você está deixando dinheiro na mesa. Usamos ferramentas proprietárias para mapear todas as oportunidades não exploradas.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/3 order-2 md:order-1 mb-8 md:mb-0 flex justify-center">
+                        <div class="relative">
+                            <div class="w-24 h-24 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-2xl timeline-dot">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 order-1 md:order-2 md:pr-8 md:text-right">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Plano Personalizado</h3>
+                        <p class="text-gray-600">
+                            Desenvolvemos um plano de ação específico para seu negócio, com estratégias priorizadas por impacto e facilidade de implementação. Você saberá exatamente o que fazer, quando fazer e como fazer.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <div class="relative">
+                            <div class="w-24 h-24 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold text-2xl timeline-dot">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Implementação com Suporte</h3>
+                        <p class="text-gray-600">
+                            Ajudamos você a colocar tudo em prática, com treinamentos, materiais e suporte contínuo. Não apenas dizemos o que fazer - mostramos como fazer e acompanhamos a execução.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 order-2 md:order-1 mb-8 md:mb-0 flex justify-center">
+                        <div class="relative">
+                            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-2xl timeline-dot">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 order-1 md:order-2 md:pr-8 md:text-right">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Otimização Contínua</h3>
+                        <p class="text-gray-600">
+                            Monitoramos os resultados e fazemos ajustes para otimizar continuamente seu faturamento e lucratividade. O mercado muda, e suas estratégias devem evoluir junto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultados" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Resultados que geramos</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Veja o que nossos clientes alcançaram trabalhando conosco
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-b from-indigo-600 to-indigo-700 text-white rounded-xl p-8 text-center hover-scale">
+                    <div class="text-5xl font-bold mb-2">3x</div>
+                    <p class="text-indigo-100">Aumento médio no faturamento</p>
+                    <div class="mt-4">
+                        <i class="fas fa-arrow-up text-green-300 text-2xl"></i>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-b from-purple-600 to-purple-700 text-white rounded-xl p-8 text-center hover-scale">
+                    <div class="text-5xl font-bold mb-2">65%</div>
+                    <p class="text-purple-100">Redução na taxa de cancelamento</p>
+                    <div class="mt-4">
+                        <i class="fas fa-arrow-down text-green-300 text-2xl"></i>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-b from-pink-600 to-pink-700 text-white rounded-xl p-8 text-center hover-scale">
+                    <div class="text-5xl font-bold mb-2">40%</div>
+                    <p class="text-pink-100">Aumento no ticket médio</p>
+                    <div class="mt-4">
+                        <i class="fas fa-arrow-up text-green-300 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Mariana Souza</h4>
+                            <p class="text-gray-600 text-sm">Dona da Boutique Estilo Próprio</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Em 3 meses, nosso faturamento aumentou 240%. Antes estávamos estagnados há 2 anos. Eles identificaram exatamente onde estávamos deixando dinheiro na mesa e nos deram um plano claro para corrigir. O melhor investimento que já fiz no meu negócio!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="flex mr-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">3 meses atrás</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ricardo Almeida</h4>
+                            <p class="text-gray-600 text-sm">Proprietário da Padaria Doce Forno</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Contratei vários 'especialistas' antes, mas só com Carlos e Ana vi resultados reais. Em 4 meses, nosso lucro líquido dobrou sem aumentar as vendas - eles nos mostraram como precificar corretamente e vender mais dos itens certos. Finalmente meu negócio está dando o lucro que merece!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="flex mr-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">5 meses atrás</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contato" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 hover-scale">
+                    <i class="fas fa-rocket mr-2"></i> Quero esses resultados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Conheça os especialistas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Duas mentes brilhantes focadas em fazer seu negócio lucrar mais
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <!-- Carlos Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-indigo-100 flex items-center justify-center p-6">
+                                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Carlos Mendes" class="w-32 h-32 rounded-full border-4 border-white">
+                            </div>
+                            <div class="md:w-2/3 p-8">
+                                <div class="uppercase tracking-wide text-sm text-indigo-600 font-semibold mb-1">Especialista em Vendas</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Carlos Mendes</h3>
+                                <p class="text-gray-600 mb-4">
+                                    +12 anos transformando negócios com técnicas de vendas comprovadas. Já treinou mais de 200 equipes de vendas.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-500 hover:text-indigo-600">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-indigo-600">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ana Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-purple-100 flex items-center justify-center p-6">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Ana Lúcia" class="w-32 h-32 rounded-full border-4 border-white">
+                            </div>
+                            <div class="md:w-2/3 p-8">
+                                <div class="uppercase tracking-wide text-sm text-purple-600 font-semibold mb-1">Estrategista de Marketing</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Ana Lúcia</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Especialista em marketing digital com foco em resultados. Suas campanhas já geraram milhões em vendas para pequenos negócios.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-500 hover:text-purple-600">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-purple-600">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-md p-8 hover-scale">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Por que somos diferentes?</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-100 text-indigo-600">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Foco em resultados reais</h4>
+                                    <p class="mt-1 text-gray-600">
+                                        Não nos importamos com métricas bonitas - só nos importamos com o dinheiro entrando no seu bolso.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-100 text-purple-600">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Só ganhamos se você ganhar</h4>
+                                    <p class="mt-1 text-gray-600">
+                                        Parte do nosso pagamento é baseado em performance - estamos totalmente alinhados com seu sucesso.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-pink-100 text-pink-600">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Estratégias simples e práticas</h4>
+                                    <p class="mt-1 text-gray-600">
+                                        Nada de teorias complexas - só ações claras que você pode implementar rapidamente.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Garantia de satisfação</h4>
+                                    <p class="mt-1 text-gray-600">
+                                        Se em 30 dias você não estiver satisfeito, devolvemos seu dinheiro. Sem perguntas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contato" class="cta-gradient py-20 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
+                    <p class="text-xl mb-8 opacity-90">
+                        Agende uma consultoria gratuita de 30 minutos com nossos especialistas. Vamos identificar as maiores oportunidades do seu negócio e mostrar como você pode começar a lucrar mais.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 rounded-full p-2 mr-4">
+                                <i class="fas fa-check-circle text-white"></i>
+                            </div>
+                            <p class="opacity-90">Sem compromisso</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 rounded-full p-2 mr-4">
+                                <i class="fas fa-check-circle text-white"></i>
+                            </div>
+                            <p class="opacity-90">100% Gratuito</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 rounded-full p-2 mr-4">
+                                <i class="fas fa-check-circle text-white"></i>
+                            </div>
+                            <p class="opacity-90">Sem enrolação - só o que funciona</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center mt-6">
+                        <div class="flex -space-x-2 mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-indigo-500" alt="Cliente">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-indigo-500" alt="Cliente">
+                        </div>
+                        <p class="text-sm opacity-90">+150 negócios transformados</p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-2xl p-8 text-gray-800 hover-scale">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Agende sua consultoria gratuita</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Seu nome*</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Seu e-mail*</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Seu telefone*</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="business" class="block text-gray-700 font-medium mb-2">Seu negócio*</label>
+                                <input type="text" id="business" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i> Enviar Agendamento
+                            </button>
+                            <p class="text-xs text-gray-500 text-center">*Campos obrigatórios. Não compartilhamos seus dados.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Perguntas frequentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tudo o que você precisa saber antes de trabalhar conosco
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-bold text-gray-800">Quanto tempo leva para ver resultados?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>
+                            A maioria de nossos clientes começa a ver melhorias significativas dentro de 30 a 60 dias. No entanto, isso varia dependendo do estágio atual do seu negócio e da rapidez com que as estratégias são implementadas. Alguns clientes relatam aumento nas vendas já nas primeiras 2 semanas após implementar nossas recomendações.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-bold text-gray-800">Vocês trabalham com qualquer tipo de negócio?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>
+                            Trabalhamos principalmente com pequenos negócios locais e regionais (físicos e online) que faturam entre R$10 mil e R$500 mil por mês. Se você está nesse perfil, provavelmente podemos ajudar. Durante a consultoria gratuita, avaliamos se seu negócio é um bom fit para nosso método e somos transparentes sobre isso.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-bold text-gray-800">Qual o investimento necessário?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>
+                            O investimento varia conforme as necessidades específicas do seu negócio. Nossos projetos geralmente começam a partir de R$3.000 mensais, mas durante a consultoria gratuita apresentamos opções que se encaixam no seu orçamento. O importante é que o retorno financeiro deve superar significativamente o investimento - caso contrário, não faz sentido trabalharmos juntos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-bold text-gray-800">Preciso ter equipe de marketing ou vendas?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>
+                            Não necessariamente. Muitos de nossos clientes começam sem equipe dedicada. Nós ajudamos a estruturar os processos para que você possa implementar sozinho ou com sua equipe atual. Conforme os resultados aparecem, você pode decidir expandir sua equipe. Nosso foco é sempre em estratégias que geram o máximo de resultado com o mínimo de recursos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-bold text-gray-800">E se eu não gostar do trabalho de vocês?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>
+                            Oferecemos uma garantia de satisfação incondicional: se dentro dos primeiros 30 dias você não estiver satisfeito com os resultados e o atendimento, devolvemos 100% do seu dinheiro. Nosso objetivo é que você fique tão feliz com os resultados que nos indique para outros empresários - essa é nossa principal forma de crescimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Está pronto para levar seu negócio ao próximo nível?</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                O momento de agir é agora. Cada dia que você espera é dinheiro deixando seu bolso.
+            </p>
+            <a href="#contato" class="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg hover-scale">
+                <i class="fas fa-bolt mr-2"></i> Quero minha consultoria grátis
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-lg mr-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Lucro Real</span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">
+                        Especialistas em tirar pequenos negócios da estagnação e fazer o dinheiro entrar de verdade.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#servicos" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                            <li><a href="#metodo" class="text-gray-400 hover:text-white transition">Método</a></li>
+                            <li><a href="#resultados" class="text-gray-400 hover:text-white transition">Resultados</a></li>
+                            <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Especialistas</a></li>
+                            <li><a href="#contato" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Contato</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                contato@lucroreal.com
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone mr-2"></i>
+                                (11) 98765-4321
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                São Paulo - SP
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-indigo-600 flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-400 flex items-center justify-center transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-pink-600 flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2023 Lucro Real. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Termos de Serviço</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511987654321" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition hover-scale">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const business = document.getElementById('business').value;
+            
+            // Here you would typically send this data to your server
+            // For now, we'll just show an alert
+            alert(`Obrigado, ${name}! Sua solicitação de consultoria foi recebida. Entraremos em contato em até 24 horas para confirmar o horário.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
